@@ -1,0 +1,28 @@
+<div class="wrapper wrapper_padding clearfix">
+	<div class="col-1 about homepage_content">
+		<h2>About</h2>
+		<hr>
+		<p>I'm a marketer &amp; business developer living in Seoul, Korea </p>
+		<p>By day I work as a business developer at Cheil, by night I teach myself to code rails application and produce songs.</p>
+		<p>You can find me posting pretty photos on <a href="http://www.instagram.com/joseph_nimz" target="_blank">Instagram</a>, and sharing some code on Github</p>
+	</div>
+	<div class="col-2 homepage_content">
+		<h2>Stuff I've Written</h2>
+		<hr>
+
+		<% @posts.each do |post| %>
+			<h3><a href="#"><%= link_to post.title, post %></a></h3>
+			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+		<% end %>
+	</div>
+	<div class="col-3 homepage_content">
+	<h2>Stuff I've Built</h2>
+		<hr>
+		<h3><a href="#">Unicasts</a></h3>
+		<p class="date">Friday April 10th</p>
+		<h3><a href="#">Yelp</a></h3>
+		<p class="date">Friday April 10th</p>
+		<h3><a href="#">Airbnb</a></h3>
+		<p class="date">Friday April 10th</p>
+	</div>
+</div>
